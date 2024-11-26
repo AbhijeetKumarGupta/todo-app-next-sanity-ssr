@@ -9,8 +9,6 @@ interface Task {
     status: Status;
 }
 
-interface TastDetails { 
-    params: { 
-        taskId: string 
-    } 
+interface TaskDetails { 
+    params: Promise<{ taskId: string }> 
 }

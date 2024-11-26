@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 import styles from './edit.module.css';
 
-export const EditTask = () => {
+const EditTask = () => {
     const { taskId } = useParams();
     const router = useRouter();
     const [task, setTask] = useState<Task | null>(null);

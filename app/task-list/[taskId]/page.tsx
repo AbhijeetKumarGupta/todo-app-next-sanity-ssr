@@ -5,8 +5,8 @@ import { notFound } from 'next/navigation';
 import styles from "./task-details.module.css";
 import DeleteButton from './DeleteButton';
 
-const TaskDetails = async ({ params }: TastDetails) => {
-  const { taskId } = await params;
+const TaskDetails = async ({ params }: TaskDetails) => {
+  const taskId = (await (params)).taskId;
 
   const task = await client.fetch(`*[_type == "task" && _id == $taskId][0]`, { taskId }).catch((error) => {
     console.error('Error fetching task details:', error);
