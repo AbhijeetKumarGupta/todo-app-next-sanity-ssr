@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from "./task-list.module.css";
 
 const TaskList = async () => {
-    const tasks = await client.fetch('*[_type == "task"]').catch((error) => {
+    const tasks = await client.fetch('*[_type == "task"]', {}, { cache: "no-store" }).catch((error) => {
         console.error('Error fetching tasks:', error);
         return <p>Error fetching tasks. Please try again later.</p>;
     });

@@ -10,8 +10,8 @@ export default function Home() {
           className={styles.logo}
           src="/todo.webp"
           alt="Next.js logo"
-          width={750}
-          height={675}
+          width={600}
+          height={600}
           priority
         />
 
